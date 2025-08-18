@@ -26,3 +26,9 @@ else:
     righe = conta_righe(contenuto)
     parole = conta_parole(contenuto)
     frequenti = parole_frequenti(contenuto)
+
+    print(f"Numero totale di righe: {righe}")
+    print(f"Numero totale di parole: {parole}")
+    print("Top 5 parole più frequenti:")
+    for parola, conteggio in frequenti:
+        print(f"{parola}: {conteggio}")
