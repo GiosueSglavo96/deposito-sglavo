@@ -8,3 +8,9 @@ def conta_parole(testo):
     testo = testo.translate(str.maketrans('', '', string.punctuation)).lower()
     parole = testo.split()
     return len(parole)
+
+def parole_frequenti(testo, top_n=5):
+    testo = testo.translate(str.maketrans('', '', string.punctuation)).lower()
+    parole = testo.split()
+    frequenze = Counter(parole).most_common(top_n)
+    return frequenze
